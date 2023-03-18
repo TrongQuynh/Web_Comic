@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+.footerIcon {
+    width: 45px;
+    height: 45px;
+}
+
+.innerLink {
+    margin: 1.18rem 0 0.83rem;
+}
+
+.innerLink i {
+    display: inline-block;
+    vertical-align: top;
+    width: 1px;
+    height: 1.11rem;
+    background-color: #e1e2e6;
+    margin-top: 0.3rem;
+}
+
+.innerLink a {
+    color: #606266;
+    font-size: 1.11rem;
+    padding: 0 1.11rem;
+}
+
+.logo {
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-size: 30px;
+}

@@ -1,0 +1,111 @@
+.comicContainer{
+    width: 80%;
+}
+.leftSide{
+    float: left;
+    width: 15%;
+    height: 100%;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.leftHeader > h5{
+    font-size: 1.67rem;
+    font-weight: 700;
+    color: #303133;
+    line-height: 1.94rem;
+    padding: 2rem 0;
+}
+
+.leftSide ul{
+    margin: 0;
+    padding: 0;
+}
+
+.leftSide li{
+    cursor: pointer;
+    list-style: none;
+    padding: 0.55rem 1.115rem;
+    font-weight: 500;
+}
+
+.leftSide li a{
+    color: #303133;
+    display: block;
+    text-decoration: none;
+    padding: 0.3rem 0;
+}
+
+.active{
+    color: #fff !important;
+    background: #07beb8;
+    border-radius: 0.28rem;
+}
+
+.rightSide{
+    float: right;
+    width: 85%;
+}
+
+.clear{
+    clear: both;
+}
+
+/* Category list */
+.colItem{
+    text-align: -webkit-center;
+    margin-bottom: 20px;
+}
+
+
+/* Category filter */
+.categoryFilter{
+    /* margin-top: 1rem; */
+    padding: 1.67rem
+}
+.filterPart{
+    display: inline-block;
+}
+
+.filterPart a{
+    text-decoration: none;
+    height: 1.94rem;
+    line-height: 1.94rem;
+    padding: 0.28rem 0.56rem;
+    border-radius: 0.28rem;
+    border: 1px solid #e1e2e6;
+    margin-left: 0.69rem;
+    color: #9fa2a8;
+    font-size: .97rem;
+    font-weight: 500;
+}
+
+.filterPart span{
+    font-weight: 500;
+}
+
+.sort{
+
+}
+
+.filter{
+
+}
+
+.filterActive{
+    background: #ecfafa;
+    color: #07beb8 !important;
+    border-color: #ecfafa;
+}
+
+.splitDevider{
+    display: inline-block;
+    vertical-align: top;
+    width: 1px;
+    height: 1.11rem;
+    background-color: #e1e2e6;
+    /* margin-top: 0.3rem; */
+    margin: 0.3rem 2rem 0;
+}
+
+/* Comic Cart */

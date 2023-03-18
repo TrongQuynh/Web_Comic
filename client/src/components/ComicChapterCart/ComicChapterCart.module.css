@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+
+
+.leftSide{
+    position: relative;
+    float: left;
+    /* width: 6rem; */
+    width: 30%;
+    height: 4rem;
+    border: 1px solid #f0f2f5;
+    /* margin-right: 1.041667rem; */
+    border-radius: 0.416667rem;
+    overflow: hidden;
+}
+
+.leftSide img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.chapterLocked{
+    filter: blur(.555556rem);
+}
+
+.disabledLink{
+    pointer-events: none;
+}
+
+.lockIcon{
+    color: #777777;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rightSide{
+float: right;
+width: 60%;
+}
+
+.clear{
+    clear: both;
+}
+
+.chapterName{
+    font-family: 'Dosis', sans-serif;
+    margin: 0.4rem 0;
+    font-size: 1.111111rem;
+    color: #303133;
+    line-height: .972222rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.chapterReleaseTime{
+    font-size: .833333rem;
+    font-weight: 400;
+    color: #a0a3a8;
+    line-height: 1.111111rem;
+}
+
+.chapterComment{
+    margin: 0 0.3rem 0 1.388889rem;
+}
+
+.commentIcon,.amountComment{
+    color: #a0a3a8;
+    font-size: .833333rem;
+}

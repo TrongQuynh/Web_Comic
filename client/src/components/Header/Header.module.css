@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+.container{
+    height: 65px;
+    border-bottom: 1px solid black;
+}
+
+.logo{
+    text-align: center;
+    /* display: inline-block; */
+    font-family: 'Satisfy', cursive;
+    font-size: 50px;
+}

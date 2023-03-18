@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Solitreo&display=swap');
+
+.comicCart{
+    margin: 0.5rem 0;
+}
+
+
+
+.comicLink{
+    width: 100%;
+    display: inline-block;
+    background-color:#e3e3e3;
+    padding: .8rem;
+    border-radius: 8px;    
+}
+
+/* Img side and info side */
+
+.imgSide{
+    position: relative;
+    float: left;
+    width: 20%;
+    width: 6.7rem;
+    height: 8.9rem;
+    border: 1px solid #f0f1f5;
+}
+
+.infoSide{
+    float: right;
+    width: 75%;
+    max-width: calc(100% - 6.66667rem);
+    height: 8.9rem;
+    background-color: #e3e3e3;
+}
+
+.clear{
+    clear: both;
+}
+
+/* Img Side */
+.imgSide > img{
+    width: 100%;
+    height: 100%;
+}
+
+.rankTag{
+    font-family: 'Solitreo', cursive;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    color: red;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAABmUlEQVRYhe3Xu0rDUBgH8P9JitAnETfF2edwcukD6FQo+AbFyVlw08EKKrqkS7dSyElOYodqOigUBaGrDk3O51DEEHpJbS7f4B8CybmEH19ychHbO7sExjHKBiwLd+D4H7hm3rgDX3kDiZ5ZA4Uw+qyBUWQ6nIFD3++NOAM7AOcHNcEC+ALDanXjHmAKJFCr2+1+AUyBBozL331+CVzXvvs54AckNOOHlbIcs0LAwFPyLN7GqoKCRCPZxgcocKWUfZts5gPU0fGsZh5AQl0pFczq4gBsKyVP5nWWDowMHC7qL/UxQ4Jqj9IZLBpTWgUJOPUc53zZuHKAApbnyqM0Q8sABjqcHKQdXDQwIC32fd//SDuhOKCAFU4qe55nu6tMK2QVTxdEunsumdyBJKiWZrXOS56XuG0a2FoHB+RVQUJ90etrlWRdwRZpczMrHJBVBQlPABpKyZtMzhfLusAAhKZKfKZnmb8AQwFxDeAi/veVV9IChwA6IFimiQcp7c88UfHEgePpRu+AeIGgANroa21K3++NigIl8w0WXZQKuhsyPQAAAABJRU5ErkJggg==");
+    background-size: contain;
+    padding-top: 0.25rem;
+    padding-left: 0.5rem;
+}
+
+.overflowText{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
+/* Info Side */
+.infoSide > p{
+    margin-bottom: 0.2rem
+}
+.comicName{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.388889rem;
+    color: #212121;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+.comicGenres{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 0.8rem !important;
+    font-weight: 600;
+}
+
+.comicDescript{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+}

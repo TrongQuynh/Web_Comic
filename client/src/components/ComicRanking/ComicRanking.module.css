@@ -1,0 +1,26 @@
+.comicContainer{
+    width: 80% !important;
+}
+
+.breadcrumb{
+    margin: 2rem 0 0.5rem 0;
+    align-items: center;
+}
+
+.breadcrumb > span{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.breadcrumb > span:first-child{
+ color: rgb(186, 188, 194);
+}
+
+.breadcrumb > span:last-child{
+    color: #303133;
+}
+
+.arrowIcon{
+    margin: 0 0.4rem;
+    font-size: 22px;
+}

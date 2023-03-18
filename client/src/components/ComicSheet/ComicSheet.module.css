@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+.comicContainer{
+    width: 80% !important;
+}
+
+.subHeader{
+    margin: 3rem 0;
+    border-bottom: 1px solid #e1e2e6;
+}
+
+.subHeader > div{
+    margin: 0 auto;
+    width: 990px;
+}
+
+.subHeader ul{
+    text-align: center;
+}
+
+.subHeader li{
+    display: inline-block;
+    list-style: none;
+    color: rgb(98, 98, 98);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.subHeader a{
+    text-decoration: none;
+}
+
+.libraryHeader > h4{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.tabActive{
+    font-weight: 700;
+}
+
+.sliceDevider{
+    display: inline-block;
+    vertical-align: top;
+    width: 2px;
+    height: 1.11rem;
+    background-color: #e1e2e6;
+    margin: 0 3rem;
+}
+
+.totalHeader{
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.totalHeader span{
+    font-weight: 600;
+}
+
+.libraryContainer{
+    margin-bottom: 2rem;
+}
+
+.favorSide{
+    text-align: center;
+}
+
+.favorSide p{
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.9px;
+}
+
+.btnLogin{
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid rgb(21, 146, 146);
+    color: rgb(21, 146, 146);
+    border-radius: 4px;
+}
