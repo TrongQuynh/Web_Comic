@@ -18,9 +18,9 @@ router.get("/comic-daily-picks", async function(req,res){
 })
 
 router.get("/comic-home-page", async function(req,res){
-    const data = readFileSync(`./src/data/Comic_HomePage.json`);
-    let comicList = JSON.parse(data)
-    // let comicList = await crawlHomePage();
+    const data = require('../../src/data/Comic_HomePage.json');
+    let comicList = data;
+    // let comicList = await crawlHomePage(); JSON.parse(data)
     return res.json(comicList);
 })
 
@@ -30,8 +30,7 @@ router.get("/comic-recommend-for-you", async function(req,res){
 
 router.post("/comic-detail-info", async function(req,res){
     const {slug,id} = req.body;
-    const data = readFileSync(`./src/data/ComicDetail_HomePage.json`);
-    let comicDetails = JSON.parse(data);
+    let comicDetails = require('../../src/data/ComicDetail_HomePage.json');
     let result = comicDetails.find(function(comic){
         return comic.id === id
     })
@@ -48,13 +47,14 @@ router.post("/comic-chapter-view", async function(req,res){
     try {
         const { slug, chapterID, comicID } = req.body;
     const url = `/view/${slug}/${chapterID}/${comicID}`
-    const data = readFileSync(`./src/data/ComicView_HomePage.json`);
-    let comicViews = JSON.parse(data)
-    let comic = (comicViews.find((comic)=> comic.comicID === comicID));
-    let chapter = comic 
-                ? comic.chapterList.find((chapter)=> chapter.chapterID === Number(chapterID))
-                : null;
-    let result = chapter ? chapter.imageList : await crawlComicView(url);
+    // const data = readFileSync(`./src/data/ComicView_HomePage.json`);
+    // let comicViews = JSON.parse(data)
+    // let comic = (comicViews.find((comic)=> comic.comicID === comicID));
+    // let chapter = comic 
+    //             ? comic.chapterList.find((chapter)=> chapter.chapterID === Number(chapterID))
+    //             : null;
+    // let result = chapter ? chapter.imageList : await crawlComicView(url);
+    let result = await crawlComicView(url);
     return res.json(result);
     } catch (error) {
         console.log("Error in router '/comic-chapter-view': " + error);

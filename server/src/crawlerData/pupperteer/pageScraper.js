@@ -19,6 +19,26 @@ async function autoScroll(page) {
     });
 }
 
+async function autoScroll_2(page) {
+    await page.evaluate(async () => {
+        await new Promise((resolve) => {
+            var totalHeight = 0;
+            var distance = 0;
+            var timer = setInterval(() => {
+                var currentHeight = document.body.scrollHeight;
+                distance += 2290;
+                window.scrollBy(0, distance);
+                totalHeight += distance;
+                console.log(totalHeight, currentHeight);
+                if (totalHeight >= 120000) {
+                    clearInterval(timer);
+                    resolve();
+                }
+            }, 3000);
+        });
+    });
+}
+
 
 class PageScraper {
     crawlChapterList({ browser, slug, comicID }) {
@@ -80,6 +100,43 @@ class PageScraper {
                 // console.log(imgList);
                 console.log("Crawl image list success");
                 resolve(imgList);
+            } catch (error) {
+                console.log("Crawl chapter Image Error " + error);
+                reject();
+            }
+        })
+    }
+
+    crawlComicRanking(browser){
+        return new Promise(async (resolve, reject) => {
+            try {
+                let url = "https://www.webcomicsapp.com/sub/rankingList?source=1&module_type=1&source_id=0&sid=71&index=0&sortType=0";
+                let page = await browser.newPage();
+                console.log(`Navigating to ${url}...`);
+                await page.goto(url);
+                await page.waitForSelector('ul.infinite-list');
+                await autoScroll_2(page);
+
+                // await page.evaluate(() => {
+                //     window.scrollTo({
+                //         top:10930,
+                //         behavior:"smooth"
+                //     })
+                // });
+
+                console.log("Class load success");
+                let comicList = await page.$$eval("ul.infinite-list > .infinite-list-item", async function (comics) {
+                    comics = comics.map((comic,index)=>{
+                        return {
+                            top:(comic.querySelector(".img-box > .rank-tag").innerText).trim(),
+                        }
+                    })
+                    return comics;
+                })
+
+                // console.log(imgList);
+                console.log("Crawl comic in ranking List success");
+                resolve(comicList);
             } catch (error) {
                 console.log("Crawl chapter Image Error " + error);
                 reject();

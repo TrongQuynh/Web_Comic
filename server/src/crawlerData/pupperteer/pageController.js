@@ -11,8 +11,8 @@ async function scrapeAll(browserInstance){
         browser = await browserInstance;
         // let chapterList = await pageScraper.crawlChapterList({browser,slug,idComic });
         // let chpaterImgs = await pageScraper.crawlChapterImage(browser, urlComicView);
-        let isHaveAChapter = await pageScraper.isHaveNextChapter({browser,slug,comicID, chapter:8 });
-        console.log(isHaveAChapter);
+        let comicRanking = await pageScraper.crawlComicRanking(browser);
+        console.log(comicRanking);
         await browser.close();
     }
     catch(err){
