@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 .comicContainer{
     width: 80% !important;
+    font-family: 'Dosis', sans-serif;
 }
 
 .breadcrumb{

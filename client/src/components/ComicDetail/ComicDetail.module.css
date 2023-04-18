@@ -34,16 +34,6 @@
     background: linear-gradient(180deg,rgba(0,0,0,.7),#fff);
 }
 
-.comicDescript{
-    font-family: 'Dosis', sans-serif;
-    margin-top: 1.3rem;
-    line-height: 2rem;
-}
-
-.comicStatisticalIcons{
-    margin-right: 0.5rem !important;
-}
-
 .comicInfo{
     width: 100%;
     background: linear-gradient(180deg,hsla(0,0%,100%,.5),#fff);
@@ -53,67 +43,12 @@
     border-right: 0.138889rem solid hsla(0,0%,100%,.8);
 }
 
-.leftSide{
-    float: left;
-    width: 25%;
-}
-
-.leftSide img{
-    width: 14.583333rem;
-    min-height: 19.444444rem;
-    max-height: 19.444444rem;
-    background: #e3e3e3;
-    box-shadow: 0 0.555556rem 2.083333rem 0 rgb(0 0 0 / 15%);
-    margin-right: 2.083333rem;
-    border-radius: 0.555556rem;
-    border: 1px solid #f0f2f5;
-}
-
-.rightSide{
-    float: right;
-    width: 75%;
-}
-
-.clear{
-    clear: both;
-}
 
 /* Comic List */
 
 .comicList{
     margin: 20px 0;
     border-bottom: 1px solid #e5e5e5;
-}
-
-.comicName > h5{
-    font-family: 'Dosis', sans-serif;
-    font-size: 1.944444rem;
-}
-
-.comicGenres,.comicAuthor{
-    margin: 0.6rem 0;
-    font-size: 1rem;
-}
-
-.comicGenres > span{
-    font-family: 'Dosis', sans-serif;
-    display: inline-block;
-    margin-right: 1rem;
-    background: aliceblue;
-    padding: 0.4rem 0.7rem;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-    
-}
-
-.comicGenres a{
-    text-decoration: none;
-    color: #606266;
-}
-
-.comicAuthor > span{
-    font-family: 'Dosis', sans-serif;
 }
 
 .chapterBannerLine{

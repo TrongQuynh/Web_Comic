@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import style from "./ComicView.module.css";
-
 import { useNavigate, useParams } from 'react-router-dom';
+
+const DOMAIN_NAME_SERVER = require("../../Helper/domain").domain.name;
+
 export default function ComicView() {
     const [isHaveNextChap, setIsHaveNextChap] = useState(false);
     const [images, setImgs] = useState([]);
-    const DOMAIN_NAME_SERVER = "http://localhost:8080";
+    // const DOMAIN_NAME_SERVER = "http://localhost:8080";
     let { slug, chapterID, comicID } = useParams();
     const navigate = useNavigate();
     console.log("Re-render Comic View: ")

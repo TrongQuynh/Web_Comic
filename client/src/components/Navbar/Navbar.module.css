@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
 .container{
     border-bottom: 1px solid black;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -17,6 +19,8 @@
 }
 
 .container li a{
+    font-family: 'Dosis', sans-serif;
+    color: black;
     display: inline-block;
     padding: 15px 20px;
     text-decoration: none;
@@ -53,4 +57,9 @@
 .iconSearch:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: transparent;
+}
+
+.active{
+    color: #07beb8 !important;
+    font-weight: 600;
 }

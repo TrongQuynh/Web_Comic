@@ -8,11 +8,11 @@ import style from "./Footer.module.css";
 
 export default function Footer() {
     return (
-        <div style={{ background: "#E8EAEC", margin: "0px" }}>
+        <div class={style.footerBox}>
             <div className="container" style={{ textAlign: "center" }}>
                 <Container>
-                    <Row>
-                        <Col xs={12}><h3>Daily Picks</h3></Col>
+                    <Row style={{paddingTop:"20px"}}>
+                        
                     </Row>
                     <Row style={{ textAlign: "center", width: "365px", margin: "auto" }}>
                         <Col xs={3}><FaFacebook className={style.footerIcon} /></Col>
@@ -41,6 +41,9 @@ export default function Footer() {
                     </Row>
                     <Row>
                         <Col xs={12} className={style.logo}>Han Comics</Col>
+                    </Row>
+                    <Row>
+                        <Col xs={12} className={style.teamInfo}>2023 Han Team</Col>
                     </Row>
                     <Row style={{paddingBottom:"20px"}}></Row>
                 </Container>

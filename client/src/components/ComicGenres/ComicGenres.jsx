@@ -10,8 +10,10 @@ import ComicLoading from '../ComicLoading/ComicLoading'
 import ComicPagination from '../Pagination/ComicPagination'
 import style from './ComicGenres.module.css'
 
+const DOMAIN_NAME_SERVER = require("../../Helper/domain").domain.name;
+
 export default function ComicGenres() {
-  const DOMAIN_NAME_SERVER = "http://localhost:8080";
+  // const DOMAIN_NAME_SERVER = "http://localhost:8080";
   const { category, filter, sortBy, page } = useParams();
   const navigate = useNavigate();
   const [comics, setComics] = useState([]);

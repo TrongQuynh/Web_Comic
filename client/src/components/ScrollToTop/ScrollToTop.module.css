@@ -1,0 +1,35 @@
+.button {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+
+    font-size: 25px;
+    background-color: white;
+    color: black;
+    width: 50px;
+    height: 50px;
+    opacity: 0.75;
+    border: 1px solid #e7eae8;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: scroll_to_top 1s infinite;
+}
+
+.button:hover {
+    background-color: #07beb8;
+    color: #e7eae8;
+}
+
+@keyframes scroll_to_top {
+
+    0%,
+    100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}

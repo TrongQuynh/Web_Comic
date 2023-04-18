@@ -4,16 +4,17 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { FaHeart, FaHotjar } from "react-icons/fa";
 import ComicChapterCart from '../ComicChapterCart/ComicChapterCart';
 import ComicCart from '../ComicCart/ComicCart';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ComicLoading from '../ComicLoading/ComicLoading';
 import { Helper } from '../../Helper';
+import ComicInfoSide from './ComicInfoSide';
+
+const DOMAIN_NAME_SERVER = require("../../Helper/domain").domain.name;
 
 export default function ComicDetail() {
-    const DOMAIN_NAME_SERVER = "http://localhost:8080";
-    const LODING_GIFT = "https://www.superiorlawncareusa.com/wp-content/uploads/2020/05/loading-gif-png-5.gif";
+    // const DOMAIN_NAME_SERVER = "http://localhost:8080";
     const [comics, setComics] = useState([]);
     const [comicInfo, setComicInfo] = useState({});
     const helper = new Helper();
@@ -73,51 +74,7 @@ export default function ComicDetail() {
             <div className={`${style.comicContainer} ${style.comicRender} container`}>
                 <div className="breadcrumb"></div>
                 <div className={style.comicInfo}>
-                    <div style={{ margin: "1.5rem" }}>
-                        <div className={style.leftSide}>
-                            <img src={comicInfo.thumbnail ? comicInfo.thumbnail : LODING_GIFT} alt={comicInfo.comicName} />
-                        </div>
-                        <div className={style.rightSide}>
-                            <div className={style.comicName}>
-                                <h5>{comicInfo.comicName}</h5>
-                            </div>
-                            <div className={style.comicGenres}>
-                                {
-                                    comicInfo.comicGenres ?
-                                        comicInfo.comicGenres.map((genre, index) => <span key={index}><Link to={`/genres/${genre}/All/Popular/1`}>{genre}</Link></span>)
-                                        : null
-                                }
-                            </div>
-                            <div className={style.comicAuthor}>
-                                {
-                                    comicInfo.comicAuthor ? <><b>Author: </b> <span >{comicInfo.comicAuthor}</span></> : null
-                                }
-
-                            </div>
-                            <div className="comicStatistical">
-                                {
-                                    comicInfo.statistical ? <><FaHeart className={style.comicStatisticalIcons} /> <span>{comicInfo.statistical.heart}</span> </> : null
-                                }
-
-                                <span style={{ margin: "0 .7rem" }}></span>
-
-                                {
-                                    comicInfo.statistical ? <>
-                                        <FaHotjar className={style.comicStatisticalIcons} />
-                                        <span>{comicInfo.statistical.hot}</span>
-                                    </> : null
-                                }
-
-                            </div>
-                            <div className={style.comicDescript}>
-                                <p>
-                                    {comicInfo.comicDescription}
-                                </p>
-                            </div>
-                        </div>
-                        <div className={style.clear}></div>
-                        <div className="btnList"></div>
-                    </div>
+                    <ComicInfoSide comicInfo={{ ...comicInfo }} />
                 </div>
             </div>
 
@@ -163,7 +120,6 @@ export default function ComicDetail() {
 
             {/* For you Section */}
             <div className={`${style.comicContainer} ${style.comicForYou} container`}>
-
                 <Row>
                     <Col xs={12}><h3 className={style.headerRecommend}>For You</h3></Col>
                 </Row>
@@ -177,7 +133,6 @@ export default function ComicDetail() {
                     }
 
                 </Row>
-
             </div>
 
         </div>

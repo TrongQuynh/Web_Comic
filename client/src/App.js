@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import SliderShow from './components/SliderShow/SliderShow';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   console.log("Out let is run");
@@ -18,6 +19,7 @@ function App() {
         <ComicList /> */}
       <Outlet/>  
       {/* <ComicDetail/> */}
+      <ScrollToTop/>
       <Footer />
     </div>
   );

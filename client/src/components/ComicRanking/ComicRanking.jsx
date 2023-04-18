@@ -6,10 +6,11 @@ import ComicCartRanking from '../ComicCart/ComicCartRanking'
 import ComicLoading from '../ComicLoading/ComicLoading';
 import style from "./ComicRanking.module.css"
 import { useParams } from 'react-router-dom';
+const DOMAIN_NAME_SERVER = require("../../Helper/domain").domain.name;
 
 export default function ComicRanking({isSearch}) {
 
-    const DOMAIN_NAME_SERVER = "http://localhost:8080";
+    // const DOMAIN_NAME_SERVER = "http://localhost:8080";
     const { search } = useParams();
     const [comics, setComics] = useState([]);
     console.log("re-render serach")
